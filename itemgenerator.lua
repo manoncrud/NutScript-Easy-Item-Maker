@@ -1,5 +1,5 @@
 concommand.Add( "cock", function (ply, cmd, args ) 
-	local activeWeapon = LocalPlayer():GetActiveWeapon()
+    local activeWeapon = LocalPlayer():GetActiveWeapon()
     local weaponClass = (activeWeapon:GetClass())--Weapon code name
     local weaponPrintName = (activeWeapon:GetPrintName())--Gay weapon print name
     local weaponModel = (activeWeapon:GetModel())
@@ -15,15 +15,15 @@ concommand.Add( "cock", function (ply, cmd, args )
     local itemClass = ("ITEM.class = \"" ..weaponClass .."\"")
     local itemModel = ("ITEM.model = \"" ..weaponModel .."\"")
     local itemDesc = ("ITEM.desc = \"" ..weaponPurpose .."\"")
-	local itemHolsterInfo = ("ITEM.holsterDrawInfo = {}")
-	local itemMelee = ("ITEM.weaponCategory = \"melee\"" .."\n" .."ITEM.width = 1" .."\n" .."ITEM.height = 2")
+    local itemHolsterInfo = ("ITEM.holsterDrawInfo = {}")
+    local itemMelee = ("ITEM.weaponCategory = \"melee\"" .."\n" .."ITEM.width = 1" .."\n" .."ITEM.height = 2")
     local itemSecondary = ("ITEM.weaponCategory = \"secondary\"" .."\n" .."ITEM.width = 2" .."\n" .."ITEM.height = 2")
     local itemPrimary = ("ITEM.weaponCategory = \"primary\"" .."\n" .."ITEM.width = 3" .."\n" .."ITEM.height = 2")
 
 
     local weaponDataMelee = (itemName .."\n" ..itemClass .."\n" ..itemModel .."\n" ..itemDesc .."\n" ..itemHolsterInfo .."\n" ..itemMelee)
     local weaponDataSecondary = (itemName .."\n" ..itemClass .."\n" ..itemModel .."\n" ..itemDesc .."\n" ..itemSecondary .."\n")
-  	local weaponDataPrimary = (itemName .."\n" ..itemClass .."\n" ..itemModel .."\n" ..itemDesc .."\n"..itemPrimary .."\n" ..itemHolsterInfo)
+    local weaponDataPrimary = (itemName .."\n" ..itemClass .."\n" ..itemModel .."\n" ..itemDesc .."\n"..itemPrimary .."\n" ..itemHolsterInfo)
 
   	local slot = (activeWeapon:GetSlot() + 1)--Slot number starts at 0 for some fucking reason.
 
