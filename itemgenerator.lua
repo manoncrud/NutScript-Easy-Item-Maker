@@ -1,4 +1,4 @@
-concommand.Add( "cock", function (ply, cmd, args ) 
+concommand.Add( "ns_generateWeaponFile", function (ply, cmd, args ) 
     local activeWeapon = LocalPlayer():GetActiveWeapon()
     local weaponClass = (activeWeapon:GetClass())--Weapon code name
     local weaponPrintName = (activeWeapon:GetPrintName())--Gay weapon print name
